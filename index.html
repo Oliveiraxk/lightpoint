@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;disp
 .hero:after{content:"";position:absolute;inset:auto 0 0;height:28%;background:linear-gradient(transparent,var(--bg));z-index:2;pointer-events:none}.hero-copy{position:relative;z-index:8;width:min(520px,100%);margin-top:-20px}.hero-copy .eyebrow{margin-bottom:20px}.hero h1{font-size:clamp(72px,10vw,145px);margin:0;letter-spacing:-.015em}.hero h1 span{color:var(--red2)}
 .hero-sub{max-width:450px;color:#c6beb4;font-size:16px;line-height:1.65;margin:24px 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-proof{display:flex;align-items:center;gap:12px;margin-top:22px;color:#a8a097;font-size:12px}.stars{color:var(--yellow);letter-spacing:2px}
 .hero-stage{position:absolute;z-index:5;right:-4%;top:50%;transform:translateY(-48%);width:min(66vw,800px);aspect-ratio:1}.orbit{position:absolute;inset:8%;border:1px solid rgba(255,255,255,.06);border-radius:50%;animation:spin 30s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;background:var(--yellow);box-shadow:0 0 35px var(--yellow)}.orbit:before{width:6px;height:6px;top:7%;left:23%}.orbit:after{width:4px;height:4px;bottom:12%;right:18%}
-.pizza-core{position:absolute;inset:31%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3a2 0 2%,transparent 3%),radial-gradient(circle,#e85b18 0 38%,#9d1b0f 40% 46%,#5a110d 48% 100%);box-shadow:0 25px 90px rgba(0,0,0,.6),0 0 0 12px rgba(255,255,255,.03);z-index:0}.pizza-core:before{content:"";position:absolute;inset:7%;border-radius:50%;border:7px solid #d58a2d;box-shadow:inset 0 0 0 5px #f1b75a,inset 0 0 45px rgba(74,14,4,.5)} 
+.pizza-core{position:absolute;inset:31%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3a2 0 2%,transparent 3%),radial-gradient(circle,#e85b18 0 38%,#9d1b0f 40% 46%,#5a110d 48% 100%);box-shadow:0 25px 90px rgba(0,0,0,.6),0 0 0 12px rgba(255,255,255,.03);z-index:0}.pizza-core:before{content:"";position:absolute;inset:7%;border-radius:50%;border:7px solid #d58a2d;box-shadow:inset 0 0 0 5px #f1b75a,inset 0 0 45px rgba(74,14,4,.5)}
 .slices{position:absolute;inset:0;transform-style:preserve-3d;animation:floatPizza 5s ease-in-out infinite}.slice{--i:0;position:absolute;left:50%;top:50%;width:190px;height:260px;transform-origin:50% 100%;clip-path:polygon(50% 0,100% 100%,0 100%);transform:translate(-50%,-100%) rotate(calc(var(--i)*45deg)) translateY(-135px) rotateX(58deg);transform-style:preserve-3d;filter:drop-shadow(0 22px 17px rgba(0,0,0,.38));transition:.5s filter}.slice .slice-img{position:absolute;inset:0;background-image:var(--pizza);background-size:cover;background-position:center;border-radius:20px;transform:rotate(180deg);filter:saturate(1.2) contrast(1.05)}.slice:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,235,150,.1),rgba(0,0,0,.25));pointer-events:none}.slice:hover{filter:drop-shadow(0 30px 30px rgba(239,43,30,.35)) brightness(1.08)}
 .hero-badge{position:absolute;z-index:8;right:5%;bottom:12%;width:160px;padding:15px;border-radius:20px;background:rgba(16,13,11,.72);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);transform:rotate(4deg)}.hero-badge b{font-family:var(--display);font-size:32px;color:var(--yellow);line-height:.8}.hero-badge span{display:block;color:#c7c0b8;font-size:11px;margin-top:7px}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes floatPizza{50%{transform:translateY(-10px) rotateZ(1deg)}}
@@ -47,6 +47,254 @@ footer{padding:60px 0 35px;border-top:1px solid var(--line);background:#070605}.
 @media(max-width:650px){.ingredient-stage{height:470px}.ingredient-pizza{width:290px}.ingredient{font-size:10px;padding:9px 12px}.ingredient:nth-child(2){left:0}.ingredient:nth-child(3){right:0}.ingredient:nth-child(4){left:-5px}.ingredient:nth-child(5){right:-5px}}
 @media(min-width:1000px){.cursor{display:block}body{cursor:none}a,button{cursor:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* =====================================================
+   PIZZA EXCLUSIVA PARA CELULAR
+   ===================================================== */
+
+.mobile-hero-pizza {
+    display: none;
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    /* Esconde a pizza original */
+    .hero-stage {
+        display: none !important;
+    }
+
+    /* Container da nova pizza */
+    .mobile-hero-pizza {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 420px;
+        margin-top: 35px;
+    }
+
+    /* Pizza */
+    .mobile-pizza {
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Centro */
+    .mobile-pizza-core {
+        position: absolute;
+        inset: 31%;
+        border-radius: 50%;
+
+        background:
+            radial-gradient(
+                circle at 35% 30%,
+                #fff3a2 0 2%,
+                transparent 3%
+            ),
+            radial-gradient(
+                circle,
+                #e85b18 0 38%,
+                #9d1b0f 40% 46%,
+                #5a110d 48% 100%
+            );
+
+        box-shadow:
+            0 25px 70px rgba(0,0,0,.6),
+            0 0 0 10px rgba(255,255,255,.03);
+    }
+
+    .mobile-pizza-core::before {
+        content: "";
+
+        position: absolute;
+        inset: 7%;
+
+        border-radius: 50%;
+
+        border: 6px solid #d58a2d;
+
+        box-shadow:
+            inset 0 0 0 4px #f1b75a,
+            inset 0 0 35px rgba(74,14,4,.5);
+    }
+
+
+    /* Fatias */
+    .mobile-slices {
+        position: absolute;
+        inset: 0;
+
+        transform-style: preserve-3d;
+
+        animation:
+            mobilePizzaFloat
+            5s ease-in-out infinite;
+    }
+
+
+    .mobile-slice {
+
+        --i: 0;
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 105px;
+        height: 155px;
+
+        transform-origin: 50% 100%;
+
+        clip-path:
+            polygon(
+                50% 0,
+                100% 100%,
+                0 100%
+            );
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-82px)
+            rotateX(58deg);
+
+        transform-style: preserve-3d;
+
+        filter:
+            drop-shadow(
+                0 18px 15px rgba(0,0,0,.4)
+            );
+    }
+
+
+    .mobile-slice-img {
+
+        position: absolute;
+
+        inset: 0;
+
+        background-image: var(--pizza);
+
+        background-size: cover;
+
+        background-position: center;
+
+        border-radius: 15px;
+
+        transform: rotate(180deg);
+
+        filter:
+            saturate(1.2)
+            contrast(1.05);
+    }
+
+
+    .mobile-slice::after {
+
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,235,150,.1),
+                rgba(0,0,0,.25)
+            );
+
+        pointer-events: none;
+    }
+
+
+    /* Animação */
+    @keyframes mobilePizzaFloat {
+
+        50% {
+            transform:
+                translateY(-8px)
+                rotateZ(1deg);
+        }
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .mobile-hero-pizza {
+
+        height: 350px;
+
+        margin-top: 25px;
+    }
+
+    .mobile-pizza {
+
+        width: 280px;
+        height: 280px;
+    }
+
+    .mobile-slice {
+
+        width: 88px;
+        height: 130px;
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-70px)
+            rotateX(58deg);
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .mobile-hero-pizza {
+
+        height: 310px;
+    }
+
+    .mobile-pizza {
+
+        width: 245px;
+        height: 245px;
+    }
+
+    .mobile-slice {
+
+        width: 76px;
+        height: 115px;
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-60px)
+            rotateX(58deg);
+    }
+
+}
 </style>
 </head>
 <body>
@@ -69,9 +317,45 @@ footer{padding:60px 0 35px;border-top:1px solid var(--line);background:#070605}.
       <p class="hero-sub">É aquele primeiro pedaço que faz você parar de conversar. Massa dourada, queijo puxando e recheio sem medo de ser feliz.</p>
       <div class="hero-actions"><a class="btn btn-primary" href="#sabores">🍕 ESCOLHER MEU SABOR</a><a class="btn btn-ghost" href="#experiencia">Ver a experiência ↓</a></div>
       <div class="hero-proof"><span class="stars">★★★★★</span><span>Feita para dar vontade antes mesmo da primeira mordida.</span></div>
+      
     </div>
   </div>
+  <!-- PIZZA EXCLUSIVA PARA CELULAR -->
+<div class="mobile-slices">
 
+    <div class="mobile-slice" style="--i:0;--pizza:url('https://images.unsplash.com/photo-1579751626657-72bc17010498?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:1;--pizza:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:2;--pizza:url('https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:3;--pizza:url('https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:4;--pizza:url('https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:5;--pizza:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:6;--pizza:url('https://images.unsplash.com/photo-1573821663912-569905455b1c?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+    <div class="mobile-slice" style="--i:7;--pizza:url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=85&w=700&auto=format&fit=crop')">
+        <div class="mobile-slice-img"></div>
+    </div>
+
+</div>
   <div class="hero-stage" id="pizzaStage" aria-label="Pizza Light Point em 3D">
     <div class="orbit"></div><div class="pizza-core"></div>
     <div class="slices">
