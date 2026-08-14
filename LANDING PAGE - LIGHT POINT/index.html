@@ -1805,15 +1805,19 @@ footer {
    TABLET / MOBILE
 ===================================================== */
 
-.hero-proof .stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(0);
-}
+@media (prefers-reduced-motion: reduce) {
 
-.hero-proof span:last-child {
-    line-height: 1.4;
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        transition-duration: .01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
 }
 
     /*
@@ -2081,6 +2085,10 @@ footer {
         scroll-behavior: auto !important;
     }
 }
+/* =====================================================
+   ESTRELAS DO HERO — APENAS CELULAR
+===================================================== */
+
 
 </style>
 </head>
