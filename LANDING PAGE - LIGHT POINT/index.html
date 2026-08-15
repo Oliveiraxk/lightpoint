@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#090807">
 <title>Light Point — Pizza que vira ponto de encontro</title>
-<h1 style="background:red;color:white;text-align:center;padding:30px;">
-    TESTE LIGHT POINT
-</h1>
 <meta name="description" content="Light Point — pizzas quentes, recheadas e impossíveis de ignorar. Escolha seu sabor e peça agora.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -44,6 +41,925 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;disp
 footer{padding:60px 0 35px;border-top:1px solid var(--line);background:#070605}.footer-top{display:flex;justify-content:space-between;gap:30px}.footer-brand{max-width:330px}.footer-brand p{color:#77716b;line-height:1.6;font-size:13px}.footer-links{display:flex;gap:55px}.footer-col b{display:block;margin-bottom:14px;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#aaa29a}.footer-col a,.footer-col span{display:block;color:#77716b;font-size:13px;margin:8px 0}.copyright{border-top:1px solid var(--line);margin-top:45px;padding-top:20px;color:#56514c;font-size:11px;display:flex;justify-content:space-between}
 .float-order{position:fixed;right:22px;bottom:22px;z-index:35;width:58px;height:58px;border-radius:50%;background:var(--red2);display:grid;place-items:center;font-size:24px;box-shadow:0 12px 35px rgba(0,0,0,.45);animation:pulse 2.2s infinite}.float-order span{position:absolute;right:0;top:-8px;background:var(--yellow);color:#24180c;font-size:8px;font-weight:900;padding:5px 7px;border-radius:99px;white-space:nowrap}@keyframes pulse{50%{box-shadow:0 12px 35px rgba(0,0,0,.45),0 0 0 12px rgba(239,43,30,.08)}}
 .cursor{position:fixed;z-index:100;pointer-events:none;width:18px;height:18px;border:1px solid #fff;border-radius:50%;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .2s,height .2s;display:none}.cursor.big{width:70px;height:70px}
+@media(max-width:900px){.nav-links{display:none}.nav{height:68px}.logo strong{font-size:25px}.hero{align-items:flex-start;padding-top:105px;min-height:980px}.hero-copy{width:100%;text-align:center;margin:0}.hero-copy .eyebrow{justify-content:center}.hero-sub{margin-left:auto;margin-right:auto}.hero-actions{justify-content:center}.hero-proof{justify-content:center}.hero-stage{top:61%;right:50%;transform:translate(50%,-50%);width:96vw}.hero-badge{right:8%;bottom:8%}.slice{width:130px;height:190px;transform:translate(-50%,-100%) rotate(calc(var(--i)*45deg)) translateY(-98px) rotateX(58deg)}}
+@media(max-width:850px){.porn{padding:85px 0}.porn-grid{grid-template-columns:1fr;gap:35px}.porn-visual{min-height:500px}.sticker{left:-8px}.porn-copy{text-align:center}.porn-copy p{margin:auto}.flavors-head{display:block}.flavors-intro{margin-top:18px}.why-grid{grid-template-columns:1fr;gap:40px}.testimonials{grid-template-columns:1fr}.quote{min-height:210px}.offer-grid{grid-template-columns:1fr;gap:40px}.deal{transform:none}}
+@media(max-width:700px){.order-box{padding:32px;flex-direction:column;align-items:flex-start}.footer-top{flex-direction:column}.footer-links{gap:35px}.copyright{flex-direction:column;gap:8px}}
+@media(max-width:650px){.ingredient-stage{height:470px}.ingredient-pizza{width:290px}.ingredient{font-size:10px;padding:9px 12px}.ingredient:nth-child(2){left:0}.ingredient:nth-child(3){right:0}.ingredient:nth-child(4){left:-5px}.ingredient:nth-child(5){right:-5px}}
+@media(min-width:1000px){.cursor{display:block}body{cursor:none}a,button{cursor:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* =====================================================
+   PIZZA EXCLUSIVA PARA CELULAR
+   ===================================================== */
+/* =====================================================
+   AJUSTES EXCLUSIVOS PARA CELULAR
+   ===================================================== */
+
+/* A pizza alternativa não existe no desktop */
+.mobile-hero-pizza {
+    display: none;
+}
+
+
+/* =====================================================
+   TABLET / CELULAR
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    /* =========================
+       MENU
+       ========================= */
+
+    .nav {
+        height: 68px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo strong {
+        font-size: 25px;
+    }
+
+    .nav-order {
+        padding: 10px 14px;
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+        min-height: auto;
+        padding-top: 105px;
+        padding-bottom: 45px;
+        align-items: flex-start;
+    }
+
+    .hero-copy {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero-copy .eyebrow {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(68px, 19vw, 100px);
+        line-height: .82;
+    }
+
+    .hero-sub {
+        max-width: 430px;
+        margin: 22px auto 28px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    /* ESTRELAS CENTRALIZADAS */
+    .hero-proof {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 7px;
+        margin-top: 20px;
+    }
+
+    .hero-proof .stars {
+        display: block;
+        text-align: center;
+    }
+
+
+    /* =========================
+       ESCONDE PIZZA DESKTOP
+       ========================= */
+
+    .hero-stage {
+        display: none !important;
+    }
+
+
+    /* =========================
+       PIZZA MOBILE
+       ========================= */
+
+    .mobile-hero-pizza {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 420px;
+        margin-top: 25px;
+    }
+
+    .mobile-pizza {
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mobile-pizza-core {
+        position: absolute;
+        inset: 31%;
+        border-radius: 50%;
+
+        background:
+            radial-gradient(
+                circle at 35% 30%,
+                #fff3a2 0 2%,
+                transparent 3%
+            ),
+            radial-gradient(
+                circle,
+                #e85b18 0 38%,
+                #9d1b0f 40% 46%,
+                #5a110d 48% 100%
+            );
+
+        box-shadow:
+            0 25px 70px rgba(0,0,0,.6),
+            0 0 0 10px rgba(255,255,255,.03);
+    }
+
+    .mobile-pizza-core::before {
+        content: "";
+        position: absolute;
+        inset: 7%;
+        border-radius: 50%;
+        border: 6px solid #d58a2d;
+
+        box-shadow:
+            inset 0 0 0 4px #f1b75a,
+            inset 0 0 35px rgba(74,14,4,.5);
+    }
+
+    .mobile-slices {
+        position: absolute;
+        inset: 0;
+        transform-style: preserve-3d;
+        animation: mobilePizzaFloat 5s ease-in-out infinite;
+    }
+
+    .mobile-slice {
+        --i: 0;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        width: 105px;
+        height: 155px;
+
+        transform-origin: 50% 100%;
+
+        clip-path: polygon(
+            50% 0,
+            100% 100%,
+            0 100%
+        );
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-82px)
+            rotateX(58deg);
+
+        transform-style: preserve-3d;
+
+        filter:
+            drop-shadow(
+                0 18px 15px rgba(0,0,0,.4)
+            );
+    }
+
+    .mobile-slice-img {
+        position: absolute;
+        inset: 0;
+
+        background-image: var(--pizza);
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 15px;
+
+        transform: rotate(180deg);
+
+        filter:
+            saturate(1.2)
+            contrast(1.05);
+    }
+
+    .mobile-slice::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,235,150,.1),
+                rgba(0,0,0,.25)
+            );
+
+        pointer-events: none;
+    }
+
+    @keyframes mobilePizzaFloat {
+        50% {
+            transform:
+                translateY(-8px)
+                rotateZ(1deg);
+        }
+    }
+
+
+    /* =========================
+       EXPERIÊNCIA
+       ========================= */
+
+    .porn {
+        padding: 85px 0;
+    }
+
+    .porn-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .porn-copy {
+        text-align: center;
+    }
+
+    .porn-copy .eyebrow {
+        justify-content: center;
+    }
+
+    .porn-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .porn-copy .btn {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .porn-visual {
+        min-height: 500px;
+    }
+
+    .sticker {
+        left: 0;
+        bottom: 35px;
+    }
+
+
+    /* =========================
+       SABORES
+       ========================= */
+
+    .flavors {
+        padding: 85px 0;
+    }
+
+    .flavors-head {
+        display: block;
+    }
+
+    .flavors-intro {
+        margin-top: 18px;
+    }
+
+    .flavor-track {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .flavor-card {
+        flex: 0 0 290px;
+    }
+
+
+    /* =========================
+       INGREDIENTES
+       ========================= */
+
+    .ingredients {
+        padding: 85px 0;
+    }
+
+    .ingredient-stage {
+        height: 470px;
+    }
+
+    .ingredient-pizza {
+        width: 290px;
+    }
+
+    .ingredient {
+        font-size: 10px;
+        padding: 9px 12px;
+        white-space: nowrap;
+    }
+
+    .ingredient:nth-child(2) {
+        left: 0;
+    }
+
+    .ingredient:nth-child(3) {
+        right: 0;
+    }
+
+    .ingredient:nth-child(4) {
+        left: -5px;
+    }
+
+    .ingredient:nth-child(5) {
+        right: -5px;
+    }
+
+
+    /* =========================
+       POR QUE LIGHT POINT
+       ========================= */
+
+    .why {
+        padding: 85px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .why-copy {
+        text-align: center;
+    }
+
+    .why-copy .eyebrow {
+        justify-content: center;
+    }
+
+    .why-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* =========================
+       DEPOIMENTOS
+       ========================= */
+
+    .proof {
+        padding: 85px 0;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .quote {
+        min-height: 210px;
+    }
+
+
+    /* =========================
+       OFERTA
+       ========================= */
+
+    .offer {
+        padding: 85px 0;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .deal {
+        transform: none;
+    }
+
+
+    /* =========================
+       PEDIDO
+       ========================= */
+
+    .order {
+        padding: 70px 0;
+    }
+
+    .order-box {
+        padding: 32px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .order-box .eyebrow {
+        justify-content: center;
+    }
+
+    .order-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .order-actions .btn {
+        width: 100%;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 35px;
+    }
+
+    .copyright {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .nav-order {
+        font-size: 10px;
+        padding: 9px 12px;
+    }
+
+    .logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .logo strong {
+        font-size: 22px;
+    }
+
+    .logo small {
+        font-size: 7px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 95px;
+    }
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    .hero-sub {
+        font-size: 14px;
+    }
+
+    .hero-actions .btn {
+        max-width: 100%;
+    }
+
+
+    /* PIZZA */
+
+    .mobile-hero-pizza {
+        height: 350px;
+        margin-top: 20px;
+    }
+
+    .mobile-pizza {
+        width: 280px;
+        height: 280px;
+    }
+
+    .mobile-slice {
+        width: 88px;
+        height: 130px;
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-70px)
+            rotateX(58deg);
+    }
+
+
+    /* EXPERIÊNCIA */
+
+    .porn-visual {
+        min-height: 400px;
+    }
+
+    .sticker {
+        width: 115px;
+        height: 115px;
+        font-size: 18px;
+        left: -5px;
+        bottom: 25px;
+    }
+
+
+    /* INGREDIENTES */
+
+    .ingredient-stage {
+        height: 420px;
+    }
+
+    .ingredient-pizza {
+        width: 250px;
+    }
+
+    .ingredient:nth-child(2) {
+        left: -5px;
+    }
+
+    .ingredient:nth-child(3) {
+        right: -5px;
+    }
+
+    .ingredient:nth-child(4) {
+        left: -10px;
+    }
+
+    .ingredient:nth-child(5) {
+        right: -10px;
+    }
+
+
+    /* PEDIDO */
+
+    .order-box {
+        padding: 25px 20px;
+    }
+
+    .order h2 {
+        font-size: 55px;
+    }
+}
+
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .mobile-hero-pizza {
+        height: 310px;
+    }
+
+    .mobile-pizza {
+        width: 245px;
+        height: 245px;
+    }
+
+    .mobile-slice {
+        width: 76px;
+        height: 115px;
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-60px)
+            rotateX(58deg);
+    }
+
+    .hero-proof {
+        font-size: 11px;
+    }
+
+    .flavor-card {
+        flex-basis: 275px;
+    }
+}
+
+
+/* =====================================================
+   DESKTOP — NÃO ALTERAR
+   ===================================================== */
+
+@media (min-width: 1000px) {
+    .cursor {
+        display: block;
+    }
+
+    body {
+        cursor: none;
+    }
+
+    a,
+    button {
+        cursor: none;
+    }
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    /* Esconde a pizza original */
+    .hero-stage {
+        display: none !important;
+    }
+
+    /* Container da nova pizza */
+    .mobile-hero-pizza {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 420px;
+        margin-top: 35px;
+    }
+
+    /* Pizza */
+    .mobile-pizza {
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Centro */
+    .mobile-pizza-core {
+        position: absolute;
+        inset: 31%;
+        border-radius: 50%;
+
+        background:
+            radial-gradient(
+                circle at 35% 30%,
+                #fff3a2 0 2%,
+                transparent 3%
+            ),
+            radial-gradient(
+                circle,
+                #e85b18 0 38%,
+                #9d1b0f 40% 46%,
+                #5a110d 48% 100%
+            );
+
+        box-shadow:
+            0 25px 70px rgba(0,0,0,.6),
+            0 0 0 10px rgba(255,255,255,.03);
+    }
+
+    .mobile-pizza-core::before {
+        content: "";
+
+        position: absolute;
+        inset: 7%;
+
+        border-radius: 50%;
+
+        border: 6px solid #d58a2d;
+
+        box-shadow:
+            inset 0 0 0 4px #f1b75a,
+            inset 0 0 35px rgba(74,14,4,.5);
+    }
+
+
+    /* Fatias */
+    .mobile-slices {
+        position: absolute;
+        inset: 0;
+
+        transform-style: preserve-3d;
+
+        animation:
+            mobilePizzaFloat
+            5s ease-in-out infinite;
+    }
+
+
+    .mobile-slice {
+
+        --i: 0;
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 105px;
+        height: 155px;
+
+        transform-origin: 50% 100%;
+
+        clip-path:
+            polygon(
+                50% 0,
+                100% 100%,
+                0 100%
+            );
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-82px)
+            rotateX(58deg);
+
+        transform-style: preserve-3d;
+
+        filter:
+            drop-shadow(
+                0 18px 15px rgba(0,0,0,.4)
+            );
+    }
+
+
+    .mobile-slice-img {
+
+        position: absolute;
+
+        inset: 0;
+
+        background-image: var(--pizza);
+
+        background-size: cover;
+
+        background-position: center;
+
+        border-radius: 15px;
+
+        transform: rotate(180deg);
+
+        filter:
+            saturate(1.2)
+            contrast(1.05);
+    }
+
+
+    .mobile-slice::after {
+
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,235,150,.1),
+                rgba(0,0,0,.25)
+            );
+
+        pointer-events: none;
+    }
+
+
+    /* Animação */
+    @keyframes mobilePizzaFloat {
+
+        50% {
+            transform:
+                translateY(-8px)
+                rotateZ(1deg);
+        }
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .mobile-hero-pizza {
+
+        height: 350px;
+
+        margin-top: 25px;
+    }
+
+    .mobile-pizza {
+
+        width: 280px;
+        height: 280px;
+    }
+
+    .mobile-slice {
+
+        width: 88px;
+        height: 130px;
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-70px)
+            rotateX(58deg);
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .mobile-hero-pizza {
+
+        height: 310px;
+    }
+
+    .mobile-pizza {
+
+        width: 245px;
+        height: 245px;
+    }
+
+    .mobile-slice {
+
+        width: 76px;
+        height: 115px;
+
+        transform:
+            translate(-50%, -100%)
+            rotate(calc(var(--i) * 45deg))
+            translateY(-60px)
+            rotateX(58deg);
+    }
+     @media (max-width: 767px) {
+
+    .hero-proof {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+
+}
 </style>
 </head>
 <body>
@@ -69,7 +985,49 @@ footer{padding:60px 0 35px;border-top:1px solid var(--line);background:#070605}.
       
     </div>
   </div>
+  <div class="mobile-hero-pizza" aria-label="Pizza Light Point">
+    <div class="mobile-pizza">
 
+      <div class="mobile-pizza-core"></div>
+
+      <div class="mobile-slices">
+
+        <div class="mobile-slice" style="--i:0;--pizza:url('https://images.unsplash.com/photo-1579751626657-72bc17010498?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:1;--pizza:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:2;--pizza:url('https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:3;--pizza:url('https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:4;--pizza:url('https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:5;--pizza:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:6;--pizza:url('https://images.unsplash.com/photo-1573821663912-569905455b1c?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+        <div class="mobile-slice" style="--i:7;--pizza:url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=85&w=700&auto=format&fit=crop')">
+          <div class="mobile-slice-img"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
   <div class="hero-stage" id="pizzaStage" aria-label="Pizza Light Point em 3D">
     <div class="orbit"></div><div class="pizza-core"></div>
     <div class="slices">
